@@ -1,17 +1,22 @@
-Revision history for Perl module DBIx::Class::InflateColumn::Serializer
+Revision history for DBIx-Class-InflateColumn-Serializer
 
-0.01 Mon Jun  8 22:39:35 2009
-    - original version
-
-0.02 Sat Jun 27 13:32:00 2009
-    - Moved from DBIx::Class::Inflator:: to DBIx::Class::InflateColumn
-    - Moved to a driver model for the serializers. No need to specify
-      the serializer in the load_components, just InflateColumn::Serializer
-    - abandonded is_json => 1, is_storable => 1, is_yaml => 1 properties for 
-      serializer_class => 'JSON', serializer_class => 'YAML',
-      serializer_class => 'Storable'
+0.04      2013-05-23 23:02:23 Europe/Madrid
+    - Some POD errors fixed
+    - Author tests moved to xt/
+    - Migrate to Dist::Zilla
 
 0.03 Mon Feb 7 18:48:00 2011
     - Migrate to Module::Install
     - Declare test_requires and optional packages (solves RT #64925)
     - use JSON instead of JSON::Any (RT #61551)
+
+0.02 Sat Jun 27 13:32:00 2009
+    - Moved from DBIx::Class::Inflator:: to DBIx::Class::InflateColumn
+    - Moved to a driver model for the serializers. No need to specify
+      the serializer in the load_components, just InflateColumn::Serializer
+    - abandonded is_json => 1, is_storable => 1, is_yaml => 1 properties for
+      serializer_class => 'JSON', serializer_class => 'YAML',
+      serializer_class => 'Storable'
+
+0.01 Mon Jun  8 22:39:35 2009
+    - original version

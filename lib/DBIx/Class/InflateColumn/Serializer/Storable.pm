@@ -1,4 +1,7 @@
 package DBIx::Class::InflateColumn::Serializer::Storable;
+{
+  $DBIx::Class::InflateColumn::Serializer::Storable::VERSION = '0.04';
+}
 
 =head1 NAME
 
@@ -68,6 +71,8 @@ sub get_freezer{
 
 Called by DBIx::Class::InflateColumn::Serializer to get the routine that deserializes
 the data stored in the column. Returns a coderef.
+
+=back
 
 =cut
 

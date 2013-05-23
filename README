@@ -75,6 +75,8 @@ COPYRIGHT
 THANKS
     Matt S Trout for his valuable feedback
 
+    Ask Bjorn Hansen
+
 SEE ALSO
     DBIx::Class, DBIx::Class::Manual::FAQ
 
