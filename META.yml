@@ -20,6 +20,6 @@ name: DBIx-Class-InflateColumn-Serializer
 requires:
   DBIx::Class: 0
 resources:
-  bugtracker: https://github.com/miquelruiz/DBIx-Class-InflateColumn-Serializer/issues
+  homepage: http://metacpan.org/release/DBIx-Class-InflateColumn-Serializer/
   repository: git://github.com/miquelruiz/DBIx-Class-InflateColumn-Serializer.git
-version: 0.04
+version: 0.05

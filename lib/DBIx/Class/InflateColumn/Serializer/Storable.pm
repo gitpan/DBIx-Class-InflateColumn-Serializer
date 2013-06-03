@@ -1,6 +1,6 @@
 package DBIx::Class::InflateColumn::Serializer::Storable;
 {
-  $DBIx::Class::InflateColumn::Serializer::Storable::VERSION = '0.04';
+  $DBIx::Class::InflateColumn::Serializer::Storable::VERSION = '0.05';
 }
 
 =head1 NAME

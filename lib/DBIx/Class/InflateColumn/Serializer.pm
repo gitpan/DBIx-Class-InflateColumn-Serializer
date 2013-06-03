@@ -1,9 +1,10 @@
 package DBIx::Class::InflateColumn::Serializer;
+{
+  $DBIx::Class::InflateColumn::Serializer::VERSION = '0.05';
+}
 
 use strict;
 use warnings;
-
-our $VERSION = '0.03';
 
 sub register_column {
     my $self = shift;
