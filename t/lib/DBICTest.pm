@@ -4,8 +4,6 @@ package # hide from PAUSE
 use strict;
 use warnings;
 
-use strict;
-use warnings;
 use DBICTest::Schema;
 
 sub populate_schema {

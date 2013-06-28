@@ -13,11 +13,13 @@ __PACKAGE__->add_columns(
   'serial1' => {
     data_type => 'varchar',
     size => 100,
-    serializer_class => 'Storable'
+    serializer_class => 'Storable',
+    is_nullable => 1,
   },
   'serial2' => {
     data_type => 'varchar',
-    serializer_class => 'Storable'
+    serializer_class => 'Storable',
+    is_nullable => 1,
   }
 );
 

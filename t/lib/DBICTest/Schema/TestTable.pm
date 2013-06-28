@@ -12,10 +12,12 @@ __PACKAGE__->add_columns(
   },
   'serial1' => {
     data_type => 'varchar',
-    size => 100
+    size => 100,
+    is_nullable => 1,
   },
   'serial2' => {
     data_type => 'varchar'
+    is_nullable => 1,
   }
 );
 

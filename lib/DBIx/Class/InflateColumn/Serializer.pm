@@ -1,6 +1,6 @@
 package DBIx::Class::InflateColumn::Serializer;
 {
-  $DBIx::Class::InflateColumn::Serializer::VERSION = '0.05';
+  $DBIx::Class::InflateColumn::Serializer::VERSION = '0.06';
 }
 
 use strict;

@@ -1,6 +1,6 @@
 package DBIx::Class::InflateColumn::Serializer::JSON;
 {
-  $DBIx::Class::InflateColumn::Serializer::JSON::VERSION = '0.05';
+  $DBIx::Class::InflateColumn::Serializer::JSON::VERSION = '0.06';
 }
 
 =head1 NAME

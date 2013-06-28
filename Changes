@@ -1,5 +1,8 @@
 Revision history for DBIx-Class-InflateColumn-Serializer
 
+0.06      2013-06-28 18:36:02 Europe/Madrid
+    - Ticket #86304 fixed. Thanks to ribasushi for the bug report :)
+
 0.05      2013-06-03 22:44:09 Europe/Madrid
     - Not using GitHub issues for this module
     - Version in modules now managed by Dist::Zilla plugin

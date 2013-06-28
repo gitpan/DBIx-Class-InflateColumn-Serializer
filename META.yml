@@ -22,4 +22,4 @@ requires:
 resources:
   homepage: http://metacpan.org/release/DBIx-Class-InflateColumn-Serializer/
   repository: git://github.com/miquelruiz/DBIx-Class-InflateColumn-Serializer.git
-version: 0.05
+version: 0.06
