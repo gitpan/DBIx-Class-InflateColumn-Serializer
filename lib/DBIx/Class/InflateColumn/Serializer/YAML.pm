@@ -1,6 +1,6 @@
 package DBIx::Class::InflateColumn::Serializer::YAML;
 {
-  $DBIx::Class::InflateColumn::Serializer::YAML::VERSION = '0.06';
+  $DBIx::Class::InflateColumn::Serializer::YAML::VERSION = '0.07';
 }
 
 =head1 NAME

@@ -4,14 +4,15 @@ author:
   - 'Jose Luis Martinez (jlmartinez@capside.com)'
 build_requires:
   DBD::SQLite: 0
-  JSON: 0
+  JSON::MaybeXS: 1.002005
   Test::Exception: 0
   Test::More: 0
   YAML: 0
+  namespace::clean: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.009, CPAN::Meta::Converter version 2.133380'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -22,4 +23,4 @@ requires:
 resources:
   homepage: http://metacpan.org/release/DBIx-Class-InflateColumn-Serializer/
   repository: git://github.com/miquelruiz/DBIx-Class-InflateColumn-Serializer.git
-version: 0.06
+version: 0.07

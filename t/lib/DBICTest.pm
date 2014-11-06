@@ -38,7 +38,7 @@ sub _database {
     my $dbuser = $ENV{"DBICTEST_DBUSER"} || '';
     my $dbpass = $ENV{"DBICTEST_DBPASS"} || '';
 
-    my @connect_info = ($dsn, $dbuser, $dbpass, { AutoCommit => 1, %args });
+    my @connect_info = ($dsn, $dbuser, $dbpass, { AutoCommit => 1, sqlite_unicode => 1, %args });
 
     return @connect_info;
 }

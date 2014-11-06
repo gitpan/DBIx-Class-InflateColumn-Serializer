@@ -1,6 +1,6 @@
 package DBIx::Class::InflateColumn::Serializer::JSON;
 {
-  $DBIx::Class::InflateColumn::Serializer::JSON::VERSION = '0.06';
+  $DBIx::Class::InflateColumn::Serializer::JSON::VERSION = '0.07';
 }
 
 =head1 NAME
@@ -17,7 +17,8 @@ DBIx::Class::InflateColumn::Serializer::JSON - JSON Inflator
     'data_column' => {
       'data_type' => 'VARCHAR',
       'size'      => 255,
-      'serializer_class'   => 'JSON'
+      'serializer_class'   => 'JSON',
+      'serializer_options' => { allow_blessed => 1, convert_blessed => 1, pretty => 1 },    # optional
     }
   );
 
@@ -34,12 +35,16 @@ And you can recover your data structure with:
 
 The data structures you assign to "data_column" will be saved in the database in JSON format.
 
+Any arguments included in C<serializer_options> will be passed to the L<JSON::MaybeXS> constructor,
+to be used by the JSON backend for both serializing and deserializing.
+
 =cut
 
 use strict;
 use warnings;
-use JSON qw//;
+use JSON::MaybeXS;
 use Carp;
+use namespace::clean;
 
 =over 4
 
@@ -53,16 +58,21 @@ the data passed to it. Returns a coderef.
 sub get_freezer{
   my ($class, $column, $info, $args) = @_;
 
+  my $opts = $info->{serializer_options};
+
+  my $serializer = JSON::MaybeXS->new($opts && %$opts ? %$opts: ());
+
   if (defined $info->{'size'}){
       my $size = $info->{'size'};
+
       return sub {
-        my $s = JSON::to_json(shift);
+        my $s = $serializer->encode(shift);
         croak "serialization too big" if (length($s) > $size);
         return $s;
       };
   } else {
       return sub {
-        return JSON::to_json(shift);
+        return $serializer->encode(shift);
       };
   }
 }
@@ -77,8 +87,11 @@ the data stored in the column. Returns a coderef.
 =cut
 
 sub get_unfreezer {
+  my ($class, $column, $info, $args) = @_;
+
+  my $opts = $info->{serializer_options};
   return sub {
-    return JSON::from_json(shift);
+    JSON::MaybeXS->new($opts && %$opts ? %$opts : ())->decode(shift);
   };
 }
 

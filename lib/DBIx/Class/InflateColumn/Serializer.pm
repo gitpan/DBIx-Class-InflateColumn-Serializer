@@ -1,6 +1,6 @@
 package DBIx::Class::InflateColumn::Serializer;
 {
-  $DBIx::Class::InflateColumn::Serializer::VERSION = '0.06';
+  $DBIx::Class::InflateColumn::Serializer::VERSION = '0.07';
 }
 
 use strict;
@@ -109,6 +109,8 @@ LICENSE file included with this module.
 Matt S Trout for his valuable feedback
 
 Ask Bjorn Hansen
+
+Karen Etheridge
 
 =head1 SEE ALSO
 

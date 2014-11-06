@@ -1,5 +1,8 @@
 Revision history for DBIx-Class-InflateColumn-Serializer
 
+0.07      2014-11-06 20:34:13+00:00 Europe/London
+    - Switch JSON backend JSON::MaybeXS. Thanks to ether for the PR
+
 0.06      2013-06-28 18:36:02 Europe/Madrid
     - Ticket #86304 fixed. Thanks to ribasushi for the bug report :)
 

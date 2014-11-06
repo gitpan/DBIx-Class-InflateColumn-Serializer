@@ -20,6 +20,12 @@ __PACKAGE__->add_columns(
     data_type => 'varchar',
     serializer_class => 'JSON',
     is_nullable => 1,
+  },
+  'serial3' => {
+    data_type => 'varchar',
+    serializer_class => 'JSON',
+    serializer_options => { allow_nonref => 1 },
+    is_nullable => 1,
   }
 );
 
